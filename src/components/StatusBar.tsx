@@ -12,8 +12,7 @@ const StatusBar = () => {
     >
       <p>
         <span className="text-black">Status: </span>
-        {status?.code}
-        {"  "}
+        {status?.code ? status?.code : ""}
         {status?.statusText}
       </p>
       <p>
