@@ -7,6 +7,7 @@ type States = {
   method: string;
   error: string;
   loading: boolean;
+  reqBody: string;
 };
 
 type Actions = {
@@ -16,12 +17,13 @@ type Actions = {
   setMethod: (newMethod: string) => void;
   setError: (newError: string) => void;
   setLoading: (newError: boolean) => void;
+  setReqBody: (newBody: string) => void;
 };
 
 const useStore = create<States & Actions>((set) => ({
   url: "",
   setUrl: (newUrl) => set(() => ({ url: newUrl })),
-  method: "",
+  method: "GET",
   setMethod: (newMethod) => set(() => ({ method: newMethod })),
   data: "",
   setData: (newData: any) => set(() => ({ data: newData })),
@@ -30,8 +32,12 @@ const useStore = create<States & Actions>((set) => ({
   // url input error (not related to response error)
   error: "",
   setError: (newError: string) => set(() => ({ error: newError })),
+  // loading state while request is being fetched
   loading: false,
   setLoading: (newLoading: boolean) => set(() => ({ loading: newLoading })),
+  // requestBody
+  reqBody: "",
+  setReqBody: (newBody: string) => set(() => ({ reqBody: newBody })),
 }));
 
 export default useStore;
