@@ -7,7 +7,7 @@ type States = {
   method: string;
   error: string;
   loading: boolean;
-  reqBody: string;
+  reqBody: any;
 };
 
 type Actions = {
@@ -17,7 +17,7 @@ type Actions = {
   setMethod: (newMethod: string) => void;
   setError: (newError: string) => void;
   setLoading: (newError: boolean) => void;
-  setReqBody: (newBody: string) => void;
+  setReqBody: (newBody: any) => void;
 };
 
 const useStore = create<States & Actions>((set) => ({
@@ -37,7 +37,8 @@ const useStore = create<States & Actions>((set) => ({
   setLoading: (newLoading: boolean) => set(() => ({ loading: newLoading })),
   // requestBody
   reqBody: "",
-  setReqBody: (newBody: string) => set(() => ({ reqBody: newBody })),
+  setReqBody: (newBody: string | undefined) =>
+    set(() => ({ reqBody: newBody })),
 }));
 
 export default useStore;

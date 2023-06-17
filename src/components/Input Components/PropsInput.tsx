@@ -44,9 +44,9 @@ const PropsInput = () => {
         </li>
       </ul>
       <div>
+        <HeadersInput tab={tab} />
         <RequestBody tab={tab} />
         <QueryInput tab={tab} />
-        <HeadersInput tab={tab} />
         <AuthInput tab={tab} />
       </div>
     </div>

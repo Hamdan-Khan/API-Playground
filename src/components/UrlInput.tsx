@@ -11,6 +11,7 @@ const UrlInput = () => {
   const setStatus = useStore((state) => state.setStatus);
   const setError = useStore((state) => state.setError);
   const setLoading = useStore((state) => state.setLoading);
+  const reqBody = useStore((state) => state.reqBody);
 
   // send request function
   const submitHandler = async () => {
@@ -27,23 +28,18 @@ const UrlInput = () => {
 
     try {
       const startTime = new Date().getTime();
+      const body = reqBody ? JSON.parse(reqBody) : "";
       let res: AxiosResponse<any> | null = null;
       if (method === "GET") {
         res = await axios.get(url);
       } else if (method === "POST") {
-        res = await axios.post(url, {
-          /* body data */
-        });
+        res = await axios.post(url, body);
       } else if (method === "PUT") {
-        res = await axios.put(url, {
-          /* body data */
-        });
+        res = await axios.put(url, body);
       } else if (method === "DELETE") {
         res = await axios.delete(url);
       } else if (method === "PATCH") {
-        res = await axios.patch(url, {
-          /* body data */
-        });
+        res = await axios.patch(url, body);
       }
       const endTime = new Date().getTime();
       const elapsedTime = endTime - startTime;

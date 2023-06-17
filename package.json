@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.5.1",
     "axios": "^1.4.0",
+    "monaco-editor": "^0.36.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-json-view-lite": "^0.9.6",
