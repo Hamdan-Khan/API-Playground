@@ -8,6 +8,8 @@ type States = {
   error: string;
   loading: boolean;
   reqBody: any;
+  query: string;
+  headers: any;
 };
 
 type Actions = {
@@ -18,6 +20,8 @@ type Actions = {
   setError: (newError: string) => void;
   setLoading: (newError: boolean) => void;
   setReqBody: (newBody: any) => void;
+  setQuery: (newQuery: string) => void;
+  setHeaders: (newHeaders: any) => void;
 };
 
 const useStore = create<States & Actions>((set) => ({
@@ -39,6 +43,12 @@ const useStore = create<States & Actions>((set) => ({
   reqBody: "",
   setReqBody: (newBody: string | undefined) =>
     set(() => ({ reqBody: newBody })),
+  // Queries
+  query: "",
+  setQuery: (newQuery) => set(() => ({ query: newQuery })),
+  // Headers
+  headers: "",
+  setHeaders: (newHeaders) => set(() => ({ headers: newHeaders })),
 }));
 
 export default useStore;

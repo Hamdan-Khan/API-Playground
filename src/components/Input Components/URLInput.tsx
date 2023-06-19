@@ -1,11 +1,29 @@
 import useStore from "../../store/store";
+import { useEffect, useState } from "react";
 
 const URLInput = ({ submitHandler }: { submitHandler: () => void }) => {
   // states
   const setMethod = useStore((state) => state.setMethod);
   const setUrl = useStore((state) => state.setUrl);
-  const url = useStore((state) => state.url);
   const method = useStore((state) => state.method);
+  const query = useStore((state) => state.query);
+
+  const [localURL, setLocalURL] = useState("");
+
+  useEffect(() => {
+    const urlWithoutQuery = localURL.substring(
+      0,
+      localURL.includes("?") ? localURL.indexOf("?") : localURL.length
+    );
+    console.log(localURL);
+    console.log(urlWithoutQuery);
+
+    setLocalURL(`${urlWithoutQuery}${query}`);
+  }, [query]);
+
+  useEffect(() => {
+    setUrl(localURL);
+  }, [localURL]);
 
   return (
     <div className="flex flex-row">
@@ -23,10 +41,10 @@ const URLInput = ({ submitHandler }: { submitHandler: () => void }) => {
       </select>
       <input
         type="text"
-        value={url}
         name="url"
+        value={localURL}
         className="focus:outline-none flex-grow bg-white px-4 py-1 border border-zinc-300"
-        onChange={(e) => setUrl(e.target.value)}
+        onChange={(e) => setLocalURL(e.target.value)}
       />
       <button
         onClick={submitHandler}

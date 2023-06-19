@@ -16,7 +16,7 @@ const PropsInput = () => {
           }`}
           onClick={() => setTab(1)}
         >
-          Headers
+          Query
         </li>
         <li
           className={`flex-grow text-center text-lg cursor-pointer border-b-[3px] border-b-transparent ${
@@ -32,7 +32,7 @@ const PropsInput = () => {
           }`}
           onClick={() => setTab(3)}
         >
-          Query
+          Headers
         </li>
         <li
           className={`flex-grow text-center text-lg cursor-pointer border-b-[3px] border-b-transparent ${
@@ -44,9 +44,9 @@ const PropsInput = () => {
         </li>
       </ul>
       <div>
-        <HeadersInput tab={tab} />
-        <RequestBody tab={tab} />
         <QueryInput tab={tab} />
+        <RequestBody tab={tab} />
+        <HeadersInput tab={tab} />
         <AuthInput tab={tab} />
       </div>
     </div>

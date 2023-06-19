@@ -11,6 +11,7 @@ const RequestBody = ({ tab }: { tab: number }) => {
   return (
     <div className={`${tab == 2 ? "block" : "hidden"}`}>
       <div>
+        <h1 className="text-lg p-2">HTTP body (JSON format)</h1>
         <div>
           <Editor
             height="160px"
