@@ -10,6 +10,7 @@ type States = {
   reqBody: any;
   query: string;
   headers: any;
+  auth: string;
 };
 
 type Actions = {
@@ -22,6 +23,7 @@ type Actions = {
   setReqBody: (newBody: any) => void;
   setQuery: (newQuery: string) => void;
   setHeaders: (newHeaders: any) => void;
+  setAuth: (newBasicAuth: string) => void;
 };
 
 const useStore = create<States & Actions>((set) => ({
@@ -49,6 +51,9 @@ const useStore = create<States & Actions>((set) => ({
   // Headers
   headers: "",
   setHeaders: (newHeaders) => set(() => ({ headers: newHeaders })),
+  // Auth state
+  auth: "",
+  setAuth: (newAuth) => set(() => ({ auth: newAuth })),
 }));
 
 export default useStore;

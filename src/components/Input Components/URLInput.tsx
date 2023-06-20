@@ -15,8 +15,6 @@ const URLInput = ({ submitHandler }: { submitHandler: () => void }) => {
       0,
       localURL.includes("?") ? localURL.indexOf("?") : localURL.length
     );
-    console.log(localURL);
-    console.log(urlWithoutQuery);
 
     setLocalURL(`${urlWithoutQuery}${query}`);
   }, [query]);

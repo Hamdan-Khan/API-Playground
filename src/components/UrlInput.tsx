@@ -74,7 +74,7 @@ const UrlInput = () => {
         statusText: err?.response?.statusText,
       });
       if (err?.code == "ERR_NETWORK") {
-        setError("ERR: NO NETWORK CONNECTION");
+        setError("ERR: NETWORK ERROR");
       }
       console.error(err);
     } finally {
