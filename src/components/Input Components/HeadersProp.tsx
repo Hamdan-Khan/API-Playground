@@ -1,8 +1,8 @@
 import useStore from "../../store/store";
-import KeyValueInput from "./KeyValueInput";
+import DynamicFields from "./DynamicFields";
 import { useState, useMemo, useEffect } from "react";
 
-const HeadersInput = ({ tab }: { tab: number }) => {
+const HeadersProp = ({ tab }: { tab: number }) => {
   const setHeaders = useStore((state) => state.setHeaders);
 
   const auth = useStore((state) => state.auth);
@@ -38,9 +38,9 @@ const HeadersInput = ({ tab }: { tab: number }) => {
   return (
     <div className={`${tab == 3 ? "block" : "hidden"}`}>
       <h1 className="ml-4 text-lg pt-2">HTTP Headers</h1>
-      <KeyValueInput inputs={headerInputs} setInputs={setHeaderInputs} />
+      <DynamicFields inputs={headerInputs} setInputs={setHeaderInputs} />
     </div>
   );
 };
 
-export default HeadersInput;
+export default HeadersProp;

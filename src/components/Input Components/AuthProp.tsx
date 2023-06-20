@@ -4,19 +4,13 @@ import BasicAuth from "./Auth Components/BasicAuth";
 import BearerAuth from "./Auth Components/BearerAuth";
 import useStore from "../../store/store";
 
-const AuthInput = ({ tab }: { tab: number }) => {
+const AuthProp = ({ tab }: { tab: number }) => {
   const [authType, setAuthType] = useState<number>(1);
   const setAuth = useStore((state) => state.setAuth);
-  const auth = useStore((state) => state.auth);
-  const headers = useStore((state) => state.headers);
 
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [bearerToken, setBearerToken] = useState<string>("");
-
-  useEffect(() => {
-    console.log(headers);
-  }, [auth]);
 
   useEffect(() => {
     setUsername("");
@@ -78,4 +72,4 @@ const AuthInput = ({ tab }: { tab: number }) => {
   );
 };
 
-export default AuthInput;
+export default AuthProp;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useStore from "../store/store";
+import useStore from "../../store/store";
 import { JsonView, defaultStyles } from "react-json-view-lite";
 
 const JsonViewer = () => {
@@ -11,9 +11,7 @@ const JsonViewer = () => {
     if (navigator.clipboard) {
       navigator.clipboard
         .writeText(text)
-        .then(() => {
-          console.log("Text copied to clipboard");
-        })
+        .then()
         .catch((error) => {
           console.error("Failed to copy text: ", error);
         });

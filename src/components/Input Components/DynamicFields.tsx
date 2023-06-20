@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 type Input = { key: string; value: string }[];
 
-const KeyValueInput = ({
+const DynamicFields = ({
   inputs,
   setInputs,
 }: {
@@ -71,4 +71,4 @@ const KeyValueInput = ({
   );
 };
 
-export default KeyValueInput;
+export default DynamicFields;

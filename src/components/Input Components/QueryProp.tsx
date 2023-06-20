@@ -1,10 +1,9 @@
 import useStore from "../../store/store";
-import KeyValueInput from "./KeyValueInput";
+import DynamicFields from "./DynamicFields";
 import { useState } from "react";
 
-const QueryInput = ({ tab }: { tab: number }) => {
+const QueryProp = ({ tab }: { tab: number }) => {
   const setQuery = useStore((state) => state.setQuery);
-  const query = useStore((state) => state.query);
 
   const [queryInput, setQueryInput] = useState([{ key: "", value: "" }]);
 
@@ -19,7 +18,6 @@ const QueryInput = ({ tab }: { tab: number }) => {
         )
         .join("");
     setQuery(queries);
-    console.log(query);
   };
   const clearQueries = () => {
     setQuery("");
@@ -43,9 +41,9 @@ const QueryInput = ({ tab }: { tab: number }) => {
           </button>
         </>
       )}
-      <KeyValueInput inputs={queryInput} setInputs={setQueryInput} />
+      <DynamicFields inputs={queryInput} setInputs={setQueryInput} />
     </div>
   );
 };
 
-export default QueryInput;
+export default QueryProp;

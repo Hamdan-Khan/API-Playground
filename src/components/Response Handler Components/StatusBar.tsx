@@ -1,4 +1,4 @@
-import useStore from "../store/store";
+import useStore from "../../store/store";
 
 const StatusBar = () => {
   const status = useStore((state) => state.status);
@@ -12,8 +12,7 @@ const StatusBar = () => {
     >
       <p>
         <span className="text-black">Status: </span>
-        {status?.code ? status?.code : ""}
-        {status?.statusText}
+        {status?.code ? status?.code : ""} {status?.statusText}
       </p>
       <p>
         <span className="text-black">Size: </span> {status?.size}

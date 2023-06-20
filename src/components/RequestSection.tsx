@@ -3,7 +3,7 @@ import useStore from "../store/store";
 import URLInput from "./Input Components/URLInput";
 import PropsInput from "./Input Components/PropsInput";
 
-const UrlInput = () => {
+const RequestSection = () => {
   // states
   const url = useStore((state) => state.url);
   const method = useStore((state) => state.method);
@@ -16,8 +16,6 @@ const UrlInput = () => {
 
   // send request function
   const submitHandler = async () => {
-    console.log(method);
-
     if (url.length < 2) {
       setError("Please enter a valid API URL");
       return;
@@ -66,7 +64,6 @@ const UrlInput = () => {
               : `${elapsedTime} ms`,
         });
       }
-      console.log(res);
     } catch (err: any) {
       setData(err?.response?.data);
       setStatus({
@@ -89,4 +86,4 @@ const UrlInput = () => {
   );
 };
 
-export default UrlInput;
+export default RequestSection;
