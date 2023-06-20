@@ -1,8 +1,8 @@
 import { useState } from "react";
 import RequestBody from "./RequestBody";
-import QueryInput from "./QueryInput";
-import HeadersInput from "./HeadersInput";
-import AuthInput from "./AuthInput";
+import AuthProp from "./AuthProp";
+import QueryProp from "./QueryProp";
+import HeadersProp from "./HeadersProp";
 
 const PropsInput = () => {
   const [tab, setTab] = useState<number>(1);
@@ -44,10 +44,10 @@ const PropsInput = () => {
         </li>
       </ul>
       <div>
-        <QueryInput tab={tab} />
+        <QueryProp tab={tab} />
         <RequestBody tab={tab} />
-        <HeadersInput tab={tab} />
-        <AuthInput tab={tab} />
+        <HeadersProp tab={tab} />
+        <AuthProp tab={tab} />
       </div>
     </div>
   );

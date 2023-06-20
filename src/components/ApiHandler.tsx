@@ -1,8 +1,8 @@
 import useStore from "../store/store";
 import "react-json-view-lite/dist/index.css";
-import UrlInput from "./UrlInput";
-import JsonViewer from "./JsonViewer";
-import StatusBar from "./StatusBar";
+import JsonViewer from "./Response Handler Components/JsonViewer";
+import StatusBar from "./Response Handler Components/StatusBar";
+import RequestSection from "./RequestSection";
 
 const ApiHandler = () => {
   const data = useStore((state) => state.data);
@@ -10,7 +10,7 @@ const ApiHandler = () => {
   const loading = useStore((state) => state.loading);
   return (
     <div className="p-4">
-      <UrlInput />
+      <RequestSection />
       <StatusBar />
       <div className="h-[400px] border border-zinc-300 overflow-auto bg-[#eee] mt-3">
         {!data && (
