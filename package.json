@@ -16,7 +16,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-json-view-lite": "^0.9.6",
-    "swr": "^2.1.5",
     "zustand": "^4.3.8"
   },
   "devDependencies": {
