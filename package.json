@@ -2,6 +2,7 @@
   "name": "api-playground",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://hamdan-k.me/API-Playground/",
   "type": "module",
   "scripts": {
     "dev": "vite",
