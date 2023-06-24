@@ -2,7 +2,7 @@
 
 API Playground is a utility tool built with React.js that allows you to make HTTP requests and interact with APIs. It provides a user-friendly interface to modify the request's body, query parameters, headers, and authentication options, and displays the corresponding response.
 
-[Link to API Playground](https://apiplayground.netlify.app)
+[Link to API Playground](https://hamdan-k.me/API-Playground/)
 
 
 ![Alt Text](https://res.cloudinary.com/dftm1aoqy/image/upload/v1687354423/api-playground_vogmtc.png)
