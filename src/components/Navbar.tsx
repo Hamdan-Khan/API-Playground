@@ -10,11 +10,11 @@ const Navbar = () => {
       </div>
       <div className="flex flex-row items-center px-2 gap-4">
         <a
-          href="https://hamdan-k.me/"
+          href="https://hamdan-khan.github.io/"
           target="_blank"
           className="hover:underline underline-offset-1"
         >
-          Portfolio
+          View More
         </a>
         <a
           href="https://github.com/Hamdan-Khan"
