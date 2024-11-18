@@ -14,9 +14,9 @@ const QueryProp = ({ tab }: { tab: number }) => {
       queryInput
         .filter((q) => q.key !== "" && q.value !== "")
         .map(
-          (q) => `&${encodeURIComponent(q.key)}=${encodeURIComponent(q.value)}`
+          (q) => `${encodeURIComponent(q.key)}=${encodeURIComponent(q.value)}`
         )
-        .join("");
+        .join("&");
     setQuery(queries);
   };
   const clearQueries = () => {

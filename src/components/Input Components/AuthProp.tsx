@@ -13,9 +13,11 @@ const AuthProp = ({ tab }: { tab: number }) => {
   const [bearerToken, setBearerToken] = useState<string>("");
 
   useEffect(() => {
-    setUsername("");
-    setPassword("");
-  }, [bearerToken]);
+    if (authType === 3) {
+      setUsername("");
+      setPassword("");
+    }
+  }, [authType]);
 
   return (
     <div
