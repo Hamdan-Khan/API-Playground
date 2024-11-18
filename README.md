@@ -45,10 +45,6 @@ Access the project directly:
 <img src="https://res.cloudinary.com/dftm1aoqy/image/upload/v1687355160/api-playground-auth_fxa3ex.png" alt="Authentication"/>
 </p>
 
-## 📡 Authentication Options
-- Basic Authentication
-- Bearer Token support
-
 # 🏗️ How to Set up `API Playground` for Development?
 
 1. Clone the repository
