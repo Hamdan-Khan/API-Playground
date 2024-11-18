@@ -16,7 +16,7 @@ Liked it? Please give a ⭐️ to **API Playground**.
 # 💻 Use API Playground
 Access the project directly:
 
-> https://github.com/yourusername/api-playground
+> https://github.com/Hamdan-Khan/API-playground
 
 # 🔥 Features
 
@@ -84,6 +84,7 @@ npm start
 This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) file for details.
 
 # 🦄 Upcoming Features
+- Improve query handling
 - Add support for more authentication methods
 - Implement request/response history
 - Add environment variable support
@@ -111,5 +112,5 @@ If you wish to contribute, you can work on any features [listed here](#-upcoming
 ---
 
 <h3 align="center">
-A ⭐️ to <b>API Playground</b> is appreciated as a motivation booster.
+A ⭐️ to <b>API Playground</b> is appreciated.
 </h3>
