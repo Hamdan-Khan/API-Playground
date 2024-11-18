@@ -22,18 +22,16 @@ const HeadersProp = ({ tab }: { tab: number }) => {
 
   useEffect(() => {
     const updatedHeaderObject = { ...headerObject };
-
+  
     if (
-      (auth.includes("Basic ") &&
-        !auth.includes("Basic Og==") &&
-        auth.length > 6) ||
-      (auth.includes("Bearer ") && auth.length > 7)
+      (auth.startsWith("Basic ") && auth !== "Basic Og==") ||
+      auth.startsWith("Bearer ")
     ) {
       updatedHeaderObject["Authorization"] = auth;
     }
-
+  
     setHeaders(updatedHeaderObject);
-  }, [headerObject, auth]);
+  }, [headerObject, auth, setHeaders]);
 
   return (
     <div className={`${tab == 3 ? "block" : "hidden"}`}>

@@ -9,26 +9,29 @@ const DynamicFields = ({
   inputs: Input;
   setInputs: (newInput: Input) => void;
 }) => {
-  const handleInputChange = (index: number, key: string, value: any) => {
+  const handleInputChange = (index: number, key: string, value: string) => {
     const newInputs = [...inputs];
     newInputs[index] = { key, value };
-
+  
     // Remove subsequent empty inputs
     let updatedInputs = newInputs.filter(
       (input, i) =>
         input.key !== "" || input.value !== "" || i === newInputs.length - 1
     );
-
+  
     // Add a new empty input if the last input is not empty
-    if (index === inputs.length - 1 && value !== "") {
+    if (index === inputs.length - 1 && (key !== "" || value !== "")) {
       updatedInputs = [...updatedInputs, { key: "", value: "" }];
     }
-
+  
     setInputs(updatedInputs);
   };
 
   useEffect(() => {
-    if (inputs[0].key !== "" && inputs[0].value !== "") {
+    if (
+      inputs.length === 0 ||
+      (inputs[0].key !== "" && inputs[0].value !== "")
+    ) {
       setInputs([...inputs, { key: "", value: "" }]);
     }
   }, []);

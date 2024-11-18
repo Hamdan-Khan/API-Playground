@@ -73,6 +73,9 @@ const RequestSection = () => {
       if (err?.code == "ERR_NETWORK") {
         setError("ERR: NETWORK ERROR");
       }
+      if (err instanceof SyntaxError) { // This condition is added if the user inserts an invalid JSON document
+        setError("ERR: Invalid JSON format in the body");
+      }
       console.error(err);
     } finally {
       setLoading(false);
