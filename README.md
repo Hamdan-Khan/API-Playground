@@ -54,7 +54,7 @@ Access the project directly:
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/api-playground.git
+git clone https://github.com/Hamdan-Khan/api-playground.git
 ```
 
 2. Change the working directory
@@ -91,7 +91,7 @@ This project is licensed under the MIT License - see the [`LICENSE`](LICENSE) fi
 - Improve error handling
 - Create saved request collections
 
-If you find something is missing, `API Playground` is listening. Please create a feature request [from here](https://github.com/yourusername/api-playground/issues/new).
+If you find something is missing, `API Playground` is listening. Please create a feature request [from here](https://github.com/Hamdan-Khan/api-playground/issues/new).
 
 # 🤝 Contributing to `API Playground`
 Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
@@ -102,10 +102,10 @@ If you wish to contribute, you can work on any features [listed here](#-upcoming
 
 # 🚀 Deploy
 
-<a href="https://vercel.com/new/project?template=https://github.com/yourusername/api-playground">
+<a href="https://vercel.com/new/project?template=https://github.com/Hamdan-Khan/api-playground">
 <img src="https://vercel.com/button" height="37.5px" />
 </a>
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/yourusername/api-playground">
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/Hamdan-Khan/api-playground">
 <img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" />
 </a>
 
