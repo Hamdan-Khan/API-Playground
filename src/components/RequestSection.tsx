@@ -32,7 +32,7 @@ const RequestSection = () => {
       const api = axios.create({
         baseURL: url,
         headers,
-      });
+      }); 
       if (method === "GET") {
         res = await api.get("");
       } else if (method === "POST") {
